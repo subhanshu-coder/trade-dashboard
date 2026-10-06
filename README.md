@@ -13,7 +13,7 @@ A dependency-free Node.js demo of a dashboard that serves cached trades immediat
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The dashboard starts with 2,400 seeded records. Choose **Pull latest trades** to start a background pull; after the configured delay, 24 new records appear automatically in every open dashboard.
+Open [http://localhost:3000](http://localhost:3000). The dashboard starts with 2,400 seeded records. Choose **Pull latest trades** to start a background pull; after the configured delay, 2,400 new records appear automatically in every open dashboard.
 
 Set the simulated pull duration (0–900,000 ms / 15 minutes) with `PULL_DELAY_MS`:
 
