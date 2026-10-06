@@ -60,3 +60,4 @@ The simulated pull duration is configurable up to 15 minutes, but the mock excha
 ## Video walkthrough
 
 Suggested 60-second recording: open the dashboard and point out the seeded trades and total; click **Pull latest trades**; show that the table stays usable while the status timer runs; then show the new rows appearing without refresh when the pull completes. To make the wait shorter, run with `PULL_DELAY_MS=5000`. Mention that the page uses SSE and the pull start endpoint returns immediately.
+# trade-dashboard
