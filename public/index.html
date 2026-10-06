@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f8"><title>Trade Desk · BSE</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="/"><span class="brand-mark">T</span><span>Trade<span class="brand-light">Desk</span></span></a><span class="exchange"><i></i> BSE EXCHANGE</span></header>
+    <section class="intro"><div><p class="eyebrow">MARKET OPERATIONS</p><h1>Trades</h1><p class="subtitle">A live view of your latest exchange activity.</p></div><button id="pullButton" class="primary"><span class="refresh">↻</span> Pull latest trades</button></section>
+    <section id="pullStatus" class="status" aria-live="polite"><span class="status-dot"></span><span id="statusText">Connecting to live updates…</span><span id="elapsed" class="elapsed"></span></section>
+    <section class="metrics"><article class="metric"><span class="metric-label">TOTAL TRADES</span><strong id="tradeCount">—</strong><span class="metric-note">Available in dashboard</span></article><article class="metric"><span class="metric-label">LAST PULL</span><strong id="lastPulled">—</strong><span id="lastPulledNote" class="metric-note">Waiting for first sync</span></article><article class="metric"><span class="metric-label">PULL STATUS</span><strong id="pullState">Ready</strong><span class="metric-note">Updates arrive in real time</span></article></section>
+    <section class="table-card"><div class="table-heading"><div><h2>Recent trades</h2><p>Latest executions from the exchange</p></div><span class="live-tag"><i></i> LIVE</span></div><div class="table-scroll"><table><thead><tr><th>TRADE ID</th><th>CLIENT</th><th>SYMBOL</th><th>QUANTITY</th><th>PRICE (₹)</th><th>TIMESTAMP</th></tr></thead><tbody id="tradeRows"><tr><td colspan="6" class="loading">Loading cached trades…</td></tr></tbody></table></div><div class="table-footer"><span id="showing">Loading trades</span><span>Newest first</span></div></section>
+    <footer><span>TradeDesk <span class="muted">· Mock exchange environment</span></span><span>Connection <b class="connected"><i></i> Event stream active</b></span></footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
