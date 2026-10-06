@@ -31,7 +31,7 @@ function sendEvent(event, data) {
 }
 
 function mockBseGetTrades() {
-  return seedTrades(24);
+  return seedTrades(2_400);
 }
 
 function startPull(delayMs) {
@@ -47,8 +47,8 @@ function startPull(delayMs) {
       const { trades: pulledTrades } = await exchangeResponse.json();
       const batch = pulledTrades.map((trade, i) => ({
       ...trade,
-      tradeId: `NEW${job.id.slice(0, 6).toUpperCase()}${String(i + 1).padStart(3, '0')}`,
-      timestamp: new Date(Date.now() - (24 - i) * 1_000).toISOString()
+      tradeId: `NEW${job.id.slice(0, 12).toUpperCase()}${String(i + 1).padStart(4, '0')}`,
+      timestamp: new Date(Date.now() - (pulledTrades.length - i) * 1_000).toISOString()
       }));
       trades.unshift(...batch);
       lastPull = { id: job.id, completedAt: new Date().toISOString(), added: batch.length };
